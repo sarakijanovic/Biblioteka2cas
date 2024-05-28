@@ -1,0 +1,14 @@
+﻿<Window x:Class="Biblioteka2cas.DodajKnjiguProzor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dodaj Knjigu" Height="200" Width="300">
+    <Grid>
+        <StackPanel>
+            <Label Content="Unesi naziv knjige" Margin="50, 0, 50, 0"/>
+            <TextBox Name="txtNaziv" Margin="50, 0, 50, 0"/>
+            <Label Content="Unesi autora" Margin="50, 0, 50, 0"/>
+            <TextBox Name="txtAutor" Margin="50, 0, 50, 0"/>
+            <Button Content="Dodaj" Click="btnDodaj_Click" Margin="50, 50, 50, 50"/>
+        </StackPanel>
+    </Grid>
+</Window>
