@@ -20,21 +20,26 @@ namespace Biblioteka2cas
     public partial class DodajKnjiguProzor : Window
     {
         public Knjiga Knjiga { get; private set; }
+        public List<Autor> Autori { get; set; }
 
-        public DodajKnjiguProzor()
+        public DodajKnjiguProzor(List<Autor> autori)
         {
             InitializeComponent();
+            Autori = autori;
+            cmbAutori.ItemsSource = Autori;
+            cmbAutori.DisplayMemberPath = "ImePrezime";
+            cmbAutori.SelectedValuePath = "Id";
         }
 
         private void btnDodaj_Click(object sender, RoutedEventArgs e)
         {
             var naziv = txtNaziv.Text;
-            var autor = txtAutor.Text;
+            var autor = (Autor)cmbAutori.SelectedItem;
             var datum = DateTime.Now;
 
-            if (!string.IsNullOrEmpty(naziv) && !string.IsNullOrEmpty(autor))
+            if (!string.IsNullOrEmpty(naziv) && autor!=null)
             {
-                Knjiga = new Knjiga(naziv, autor, datum);
+                Knjiga = new Knjiga(naziv, $"{autor.Ime} {autor.Prezime}", datum);
                 DialogResult = true;
             }
             else

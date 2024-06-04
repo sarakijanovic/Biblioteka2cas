@@ -21,7 +21,7 @@ namespace Biblioteka2cas
     /// </summary>
     public partial class MainWindow : Window
     {
-        private const string KnjigeFile = @"C:\Users\MAXX\Documents\knjige.txt";
+        private const string KnjigeFile = @".\knjige.txt";
         private const string AutoriFile = @"C:\Users\MAXX\Documents\autori.txt";
 
         private List<Knjiga> knjige = new List<Knjiga>();
@@ -110,7 +110,7 @@ namespace Biblioteka2cas
 
         private void DodajKnjigu()
         {
-            var prozor = new DodajKnjiguProzor();
+            var prozor = new DodajKnjiguProzor(autori);
             if (prozor.ShowDialog() == true)
             {
                 knjige.Add(prozor.Knjiga);

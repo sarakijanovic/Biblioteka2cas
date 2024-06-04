@@ -8,8 +8,10 @@ namespace Biblioteka2cas
 {
     public class Autor
     {
+        public int id { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
+        public string ImePrezime => $"{Ime} {Prezime}";
 
         public Autor(string ime, string prezime)
         {

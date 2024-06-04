@@ -4,13 +4,10 @@
         Title="Dodaj Autora" Height="200" Width="300">
     <Grid>
         <StackPanel>
-          
-
-            <Label Content="Unesi ime" Margin="50, 0, 50, 0"/>
+            <Label Content="Unesi ime autora" Margin="50, 0, 50, 0"/>
             <TextBox Name="txtIme" Margin="50, 0, 50, 0"/>
-            <Label Content="Unesi prezime" Margin="50, 0, 50, 0"/>
+            <Label Content="Unesi prezime autora" Margin="50, 0, 50, 0"/>
             <TextBox Name="txtPrezime" Margin="50, 0, 50, 0"/>
-            
             <Button Content="Dodaj" Click="btnDodaj_Click" Margin="50, 50, 50, 50"/>
         </StackPanel>
     </Grid>
