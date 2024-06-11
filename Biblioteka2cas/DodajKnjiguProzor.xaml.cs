@@ -27,7 +27,6 @@ namespace Biblioteka2cas
             InitializeComponent();
             Autori = autori;
             cmbAutori.ItemsSource = Autori;
-            cmbAutori.DisplayMemberPath = "ImePrezime";
             cmbAutori.SelectedValuePath = "Id";
         }
 

@@ -8,10 +8,13 @@ namespace Biblioteka2cas
 {
     public class Autor
     {
+        //ako imate ID od obelezja u vasim projektima bilo bi dobro da dodate neku sekvencu
+        /// <summary>
+        /// /ili slicno tako da se ta vrednost automatski podesava a ne da korisnik bira ID
+        /// </summary>
         public int id { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
-        public string ImePrezime => $"{Ime} {Prezime}";
 
         public Autor(string ime, string prezime)
         {
